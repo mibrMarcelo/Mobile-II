@@ -3,6 +3,8 @@ import { View, Text, TextInput, Button, TouchableOpacity, Image} from 'react-nat
 import styles from './estilos/estilo';
 import firebase from './firebaseConnect';
 import imgLogo from './assets/logo.png';
+import {Form} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 console.disableYellowBox=true;
 
@@ -74,6 +76,12 @@ export default function login () {
               onChangeText={(texto) => setPassword(texto) }
               value={password}
               />
+
+              <Form.Check style={{color: '#999999'}}
+                  type="switch"
+                  id="custom-switch"
+                  label="Manter conectado"
+              /><br/>
 
               <View style={styles.botoes}>
               

@@ -32,7 +32,7 @@ export default StyleSheet.create({
       },
 
       input:{
-        marginBottom: 50,
+        marginBottom: 40,
         padding: 15,
         borderWidth: 1,
         borderColor: '#af4dff',

@@ -1,9 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, TextInput, Button, TouchableOpacity, Image} from 'react-native';
+import { View, Text, StyleSheet, TextInput, Button, TouchableOpacity, Image, Switch} from 'react-native';
 import styles from './estilos/estilo';
 import firebase from './firebaseConnect';
 import imgLogo from './assets/logo.png';
+import {Form} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 console.disableYellowBox=true;
 
@@ -68,6 +70,12 @@ export default function App(){
               onChangeText={(texto) => setSenha(texto) }
               value={senha}
               />
+
+            <Form.Check style={{color: '#999999'}}
+                type="switch"
+                id="custom-switch"
+                label="Aceito que o site armazene meus dados para o acesso."
+            /><br/>
 
               <View style={styles.botoes}>
 
